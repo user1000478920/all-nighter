@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all nighter</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+    * {
+    font-family: 'Vazirmatn', sans-serif !important;
+    }   /* discord ahh font*/
+    body { 
+     background: #121212;
+    }
+    .collage-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px; /* space between images */
+    width: 90%;
+    max-width: 1200px; /* prevent image from stretching too much on very large screens */
+    margin: auto;
+    }
+    @media screen and (max-width:400px){
+    .image-wrapper {
+    height: 100%;
+    overflow: hidden;
+    }
+    #note{
+    display: hidden;
+    }
+    }
+    @media screen and (min-width:400px){
+    .image-wrapper {
+    aspect-ratio: 3/2;
+    overflow: hidden;
+    }
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* tell image to cover the entire container while maintaining its aspect ratio, cropping the excess if needed */
+        display: block;
+        object-position: 30% 0;
+    }
+    p{
+    color: #666666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    u{
+    color: #676767; /* 67 */
+    }
+    a{
+    text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+ <p id="note">
+ double click to open image
+ </p>
+ <div class="collage-container">
+ </div>
+ <p> made by&nbsp;<u>user</u></p>
+ <p> images gathered from chat-clips, caught-in-4k,infernum,...
+ </p> 
+ <p>
+   <a href="https://github.com/user1000478920/all-nighter" target="_blank">
+    guthib
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+   </svg></a>
+ </p>
+ <script>
+  const imgArr = [
+   '5cm long.jpg',
+   'day.jpg',
+   'adwait redit.jpg',
+   'afk tuton.jpg',
+   'all nighter mod.jpg',
+   'antity m f.jpg',
+   'ball trim.jpg',
+   'count 1.jpg',
+   'count 4.jpg',
+   'count eeen.jpg',
+   'fevikol freeze.jpg',
+   'fight-over-musico.jpg',
+   'haru-fw-watermelon.jpg',
+   'hole goal kick football.jpg',
+   'inf send/hyper mountain.png',
+   'iit-bandi-best💯.png',
+   'image-3.png',
+   'inferno turn on.jpg',
+   'infernum cant find E.jpg',
+   'infernum goo.jpg',
+   'infernum play with balls.jpg',
+   'infernum-bl.jpg',
+   'infernum-stfu.jpg',
+   'kesi he.jpg',
+   'kishu-gae.jpg',
+   'many-users.jpg',
+   'mede send image.jpg', 
+   'mede sing sweater weather.jpg',
+   'media-confession.jpg',
+   'amogus-confession.jpg',
+   'nega peg inferno.jpg',
+   'o dear.jpg',
+   'owo cf fail.jpg',
+   'owo define adwait.jpg',
+   'pixel fail.jpg',
+   'pixel parents domt know.jpg',
+   'pixel-body-count.jpg',
+   'pixel-disper.jpg',
+   'poo.png',
+   'shlego tickle land.jpg',
+   'shlego-virgi .jpg',
+   'siddh i ant.jpg',
+   'stop start.jpg',
+   'type shu.jpg',
+   'new/vici.jpg',
+   'new/uzer family.jpg',
+   'new/kishu.jpg',
+   'vamike.jpg',
+   'yukta part 1.jpg',
+   'yukta part 2.jpg',
+   'yukta reveal.jpg',
+   'yukta.jpg',
+   'inf send/yukt lebinese.png',
+   'zone guess.jpg',
+   '°° hug adwait.jpg',
+   'quotes/@Make it quote.png',
+   'quotes/adwait-virginity.png',
+   'quotes/change is inevitable.png',
+   'quotes/coconut.png',
+   'quotes/goner.png',
+   'quotes/hyper-quote.png',
+   'quotes/inferenum kiss aggressive.png',
+   'quotes/infernum ghost mi.png',
+   'quotes/mede is girl.png',
+   'quotes/nega.png',
+   'quotes/quote-infernum-turn-on.png',
+   'quotes/siddhi-quote.png',
+   'quotes/siren take clothes off.png',
+   'quotes/siren take my under.png',
+   'quotes/someone are you girl.png',
+   'quotes/water in scid boom.png',
+   'quotes/balls!.png',
+   'confessions/pixel ganda.jpg',
+   'infra/gork is this true.jpg',
+   'infra/infra likes siddhi.jpg',
+   'infra/infra girl.jpg'
+   ];
+// yes i made this array myself becaus i dont know how to use fs
+  const div = document.querySelector('.collage-container');
+//  console.log(div);
+  imgArr.forEach((elem,index)=>{
+   let img = document.createElement("img");
+   img.src = "img/" + elem;
+   img.alt = elem;
+   img.ondblclick = () => window.open(img.src,'_blank');
+   let imgdiv = document.createElement("div");
+   imgdiv.classList.add("image-wrapper");
+   imgdiv.append(img)
+   console.log(imgdiv);
+   div.append(imgdiv);
+     })
+ </script>
+</body>
+</html>
