@@ -21,6 +21,7 @@
     max-width: 1200px; /* prevent image from stretching too much on very large screens */
     margin: auto;
     }
+    /* for mobile screns */
     @media screen and (max-width:400px){
     .image-wrapper {
     height: 100%;
@@ -30,6 +31,7 @@
     display: none;
     }
     }
+    /* for desktop screens */
     @media screen and (min-width:400px){
     .image-wrapper {
     aspect-ratio: 3/2;
@@ -155,7 +157,6 @@
    ];
 // yes i made this array myself becaus i dont know how to use fs
   const div = document.querySelector('.collage-container');
-//  console.log(div);
   imgArr.forEach((elem,index)=>{
    let img = document.createElement("img");
    img.src = "img/" + elem;
@@ -163,7 +164,7 @@
    img.ondblclick = () => window.open(img.src,'_blank');
    let imgdiv = document.createElement("div");
    imgdiv.classList.add("image-wrapper");
-   imgdiv.append(img)
+   imgdiv.append(img);
    console.log(imgdiv);
    div.append(imgdiv);
      })
