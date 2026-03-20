@@ -22,7 +22,7 @@
     margin: auto;
     }
     /* for mobile screns */
-    @media screen and (max-width:400px){
+    @media screen and (max-width:600px){
     .image-wrapper {
     height: 100%;
     overflow: hidden;
@@ -32,7 +32,7 @@
     }
     }
     /* for desktop screens */
-    @media screen and (min-width:400px){
+    @media screen and (min-width:600px){
     .image-wrapper {
     aspect-ratio: 3/2;
     overflow: hidden;
@@ -165,7 +165,6 @@
    let imgdiv = document.createElement("div");
    imgdiv.classList.add("image-wrapper");
    imgdiv.append(img);
-   console.log(imgdiv);
    div.append(imgdiv);
      })
  </script>
