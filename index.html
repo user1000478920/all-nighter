@@ -58,11 +58,27 @@
     a{
     text-decoration: none;
     }
+    /* view image */
+    .img-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    }
+    .img-overlay img {
+    max-width: 92vw;
+    max-height: 92vh;
+    box-shadow: 0 0 60px rgba(0,0,0,0.8);
+    }
     </style>
 </head>
 <body>
  <p id="note">
- double click to open image
+ click to open image
  </p>
  <div class="collage-container">
  </div>
@@ -77,6 +93,13 @@
    </svg></a>
  </p>
  <script>
+ function openImg(src) {
+  const overlay = document.createElement("div");
+  overlay.className = "img-overlay";
+  overlay.innerHTML = `<img src="${src}" alt="full image">`;
+  overlay.addEventListener("click", () => overlay.remove());
+  document.body.appendChild(overlay);
+  }
   const imgArr = [
    '5cm long.jpg',
    'day.jpg',
@@ -164,7 +187,7 @@
    let img = document.createElement("img");
    img.src = "img/" + elem;
    img.alt = elem;
-   img.ondblclick = () => window.open(img.src,'_blank');
+   img.addEventListener("click", (e) => openImg(e.target.src));
    let imgdiv = document.createElement("div");
    imgdiv.classList.add("image-wrapper");
    imgdiv.append(img);
